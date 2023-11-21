@@ -11,7 +11,8 @@ CI/CD pipeline and infrastructure deployment
 
 initial CI/CD pipeline plan
 I have created a flow chart detailing a CI/CD setup. This flow puts a lot of prioritization on testing, both on the developers side and on remote side. Read more below the figure.
-![](assets/CICD pipeline flow.drawio.svg)
+
+![](/assets/CICD%20pipeline%20flow.drawio.svg)
 
 
 
@@ -32,10 +33,12 @@ If manual validation is part of the release process, then this is also an approp
 Deployment stage:
 Here we deploy our revision. If we have any staging or development environments, then this revision of our service should be deployed here.
 Given the deployments on the aforementioned environments were successful, we could also decide here to deploy to production.
-It is at this stage that Infrastructure as Code makes it's significance. If we have a critical service exposed to our stakeholders, then it is crucial to know which configurations of our service as working as intended. IaC allows for automation, And importantly it also allows for configuration versioning. 
+It is at this stage that Infrastructure as Code makes it's significance. If we have a critical service exposed to our stakeholders, then it is crucial to know which configurations of our service as working as intended. IaC allows for automation, And importantly it also allows for configuration versioning.
 With versioning, we can always keep a history of the state of our product, and be able to revisit a specific state. This enables easy rollbacks, in case of failures, and more deterministic statefulness, as well as more information stored to troubleshoot with.
 
 We can keep this configuration as part of the source code repo for our product, or we can contain them in a separate git repo, perhaps when we want to facilitate a microservices architecture. We can then keep state versioning on all our microservices at any given time.
+
+
 
 
 __________________________________
